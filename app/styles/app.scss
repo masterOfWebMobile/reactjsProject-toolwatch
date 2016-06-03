@@ -1,0 +1,130 @@
+.app-container {
+	text-align: left;
+
+	.app-content {
+		text-align: center;
+	}
+}
+
+
+.rc-tabs-top {
+	border: none;
+
+	.rc-tabs-tabs-bar {
+		background-color: white;
+
+		.close-btn {
+			color: red;
+			margin-left: 10px;
+			cursor: pointer;
+		}
+	}
+}
+
+.toolbar {
+	display: flex;
+	flex-direction: row;
+	background-color: white;
+	padding: 0 30px;
+}
+
+.fit-screen {
+	height: calc(100vh - 66px);  // 66px is tab header height
+	overflow: auto;
+}
+
+.meter-container {
+	position: relative;
+	width: 100%;
+
+	.meter-bg {
+		width: 100%;
+	}
+	.meter-centerpoint {
+		width: 15px;
+		height: 15px;
+		border-radius: 7.5px;
+		background-color: gray;
+		position: absolute;
+		left: 50%;
+		bottom: 13.5px;
+		transform: translateX(-50%);
+	}
+	.meter-needle {
+		position: absolute;
+		background-color: black;
+		width: 35%;
+		height: 3px;
+		left: 15%;
+		bottom: 20px;
+		transform-origin: 100% 50%;
+	}
+}
+
+.number-widget {
+	color: white;
+	background-color: rgb(69, 69, 69);
+	width: 100%;
+	padding: 20px;
+	letter-spacing: 10px;
+	font-family: DS-DIGII;
+	font-size: 45px;
+	border: 2px solid rgb(33, 33, 33);
+	box-sizing: border-box;
+}
+
+.parameter-form {
+	padding: 25px 10px 10px 10px;
+	max-width: 800px;
+
+	.form-container {
+		border: 1px solid black;
+		border-radius: 5px;
+		padding: 5px;	
+
+		.form-title {
+			background-color: $form-color1;
+			padding: 3px 5px;
+			color: white;
+			margin: 0 5px;
+			margin-top: -18px;
+		}
+		.form-content {
+			padding: 15px;
+
+			.form-row {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+
+				.form-label {
+					flex: 0.5;
+					text-align: right;
+					margin-right: 10px;
+				}
+
+				.form-control {
+					flex: 1;
+					display: flex;
+					flex-direction: row;
+				}
+
+				.form-accessory {
+					min-width: 200px;
+				}
+
+				.btn {
+					max-width: 100px;
+					text-align: center;
+					padding-top: 5px;
+					padding-bottom: 5px;
+				}
+			}
+		}
+	}
+}

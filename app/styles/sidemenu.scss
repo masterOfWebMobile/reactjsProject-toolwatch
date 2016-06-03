@@ -1,0 +1,162 @@
+.side-menu{
+
+	height: 100%;
+	background-color: #ccc;
+
+	.tab-container {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+
+		.tab-header {
+			display: flex;
+			background-color: #eee;
+			padding: 5px;
+			flex-direction: row;
+
+			.tab-label{
+				padding-left: 10px;
+				flex: 1;
+			}
+
+			.header-link {
+				cursor: pointer;
+				margin-right: 10px;
+			}
+		}
+
+		.tab-content {
+			flex: 1;
+
+			.nav-section {
+				border: 1px solid black;
+				overflow-y: auto;
+			}
+
+			.nav-title {
+				padding: 5px;
+				@include gray-gradient-background();
+
+		    &:hover {
+		    	border: 1px solid darkblue;
+		    }
+			}
+
+			.nav-item {
+				padding: 7px;
+				margin: 2px;
+				@include gray-gradient-background();
+
+		    &.no-bg {
+		    	background: transparent;
+		    }
+
+		    &:hover, &.active {
+		    	@include app-gradient-background();
+		    }
+
+		    &:hover {
+		    	border: 1px solid darkblue;
+		    }
+
+		    svg {
+		    	margin-right: 5px;
+		    }
+			}
+		}
+	}
+
+	&.collapsed {
+		width: 30px;
+		background-color: white;
+
+		.collapsed-menu-container {
+
+			.menu-labels {
+				position: fixed;
+				height: 100%;
+				padding: 3px;
+				z-index: 1000;
+				background-color: white;
+
+				.menu-item {
+					font-size: 16px;
+					padding: 5px 3px;
+					cursor: pointer;
+					writing-mode: vertical-lr;
+
+					@include  gray-gradient-background();
+
+					&:hover {
+						@include app-gradient-background();
+					}
+				}
+			}
+
+			.collapsed-menu {
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 30px;
+				width: 20%;
+				border-left: 1px solid black;
+				border-right: 1px solid black;
+				background-color: #ccc;
+				overflow: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 999;
+			}
+
+
+			.collapsed-menu-enter {
+				left: -20%;
+			}
+
+			.collapsed-menu-enter.collapsed-menu-enter-active {
+				left: 30px;
+				transition: left 200ms ease-in;
+			}
+
+			.collapsed-menu-leave {
+				left: 30px;
+			}
+
+			.collapsed-menu-leave.collapsed-menu-leave-active {
+				left: -20%;
+				transition: left 100ms ease-in;
+			}
+
+		}
+	}
+}
+
+.collapsible-pane {
+	font-size: 13px;
+	margin: 10px;
+
+	.pane-header {
+		padding: 5px;
+		background-color: #ddd;
+		border: 1px solid #eee;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		cursor: pointer;
+	}
+
+	.panel-content {
+		background-color: white;
+		border: 1px solid #eee;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+
+		.item {
+			padding: 5px 20px;
+
+			a {
+				text-decoration: none;
+				color: black;
+			}
+		}
+	}
+}

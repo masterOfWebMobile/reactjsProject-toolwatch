@@ -1,0 +1,48 @@
+.login-page {
+	width: 100vw;
+	height: 100vh;
+  color: #333;
+  font-weight: 200;
+  background-image: url('/assets/images/background.jpg');
+  background-size: cover;
+  padding: 0;
+
+  .login-form{
+		background-color: rgba(56, 138, 195, 0.7);
+		position: absolute;
+	  left: 50%;
+	  top: 50%;
+	  transform: translate(-50%,-50%);
+	  width: 350px;
+	  padding: 40px;
+	  color: white;
+
+	  .form-title {
+	  	text-align: center;
+	  }
+	}
+
+	.input-group {
+		display: flex;
+		margin-bottom: 10px;
+		color: white;
+		text-align: left;
+	}
+
+	.input-group input[type="text"], .input-group input[type="password"] {
+		flex: 1;
+		font-size: 17px;
+		padding: 5px 10px;
+	}
+
+	.submit-button {
+		padding: 20px;
+	}
+
+	.error-text {
+		color: yellow;
+		font-size: 13px;
+		font-style: italic;
+	}
+}
+

@@ -1,0 +1,67 @@
+body {
+	margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+p {
+	margin: 0;
+}
+
+.display-flex {
+	display: flex;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.no-padding {
+	padding: 0 !important;
+}
+
+.no-margin {
+	margin: 0 !important;
+}
+
+.fill {
+	flex: 1;
+}
+
+.inline {
+	display: inline-block;
+}
+
+.btn {
+	background-color: #f89635;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	padding: 10px;
+	color: white;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.btn:active {
+	opacity: 0.5;
+}
+
+.bg-white {
+	background-color: white;
+}
+
+.bg-gray {
+	background-color: #ccc;
+}
+
+.black {
+	color: black;
+}
+
+.vertical-center {
+	vertical-align: middle;
+}

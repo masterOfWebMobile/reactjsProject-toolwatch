@@ -1,0 +1,90 @@
+.dashboard {
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+}
+
+.dashboard-sections {
+	display: flex;
+	flex-direction: row;
+
+	.dashboard-section {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		display: flex;
+		flex-direction: column;
+
+		.title {
+			font-weight: bold;
+			font-size: 16px;
+			color: black;
+			padding: 3px 10px;
+			background-color: $app-brand-color;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+
+		.content {
+			flex: 1;
+			padding: 10px;
+			border: 2px solid lightgray;
+			display: flex;
+			flex-direction: column;
+
+			.main-content {
+				flex: 1;
+				margin-bottom: 15px;
+				overflow: auto;
+
+				a {
+					display: block;
+					padding: 2px 0;
+					color: blue;
+					text-decoration: underline;
+					cursor: pointer;
+				}
+
+				&.chart {
+					text-align: center;
+				}
+			}
+
+			.footer-content {
+				display: flex;
+				flex-direction: row;
+
+				a {
+					cursor: pointer;
+					text-decoration: underline;
+					color: black;
+					&:not(:last-child) {
+						margin-right: 20px;
+					}
+				}
+			}
+		}
+
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 15px;
+	}
+}
+
+.performance-table {
+	th.indicator, th.period {
+		min-width: 300px;
+	}
+	th.current, th.previous, th.change {
+		min-width: 150px;
+	}
+	th {
+		border-right: 1px solid gray;
+	}
+	th, td {
+		padding: 2px 5px;
+	}
+}

@@ -1,0 +1,42 @@
+.tool-browser, .transfer-browser, .tool-model-records, .tool-kits, .material-browser, .material-model-records {
+	background-color: #eee;
+	.content {
+		padding: 10px;
+		height: calc(100% - 60px);
+		display: flex;
+		flex-direction: row;
+
+		.view {
+			flex: 0.2;
+			display: flex;
+			flex-direction: column;
+			border: 1px solid black;
+			margin-right: 10px;
+			padding: 5px;
+			overflow: hidden;
+
+			.grid-header {
+				padding: 10px 10px;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+
+				button {
+					margin: 0 5px;
+				}
+			}
+			
+			.view-content {
+				flex: 1;
+				border: 1px solid darkgray;
+				margin: 5px 0;
+				overflow: auto;
+			}
+		}
+	}
+}
+
+.transfer-browser .ag-fresh .ag-header-cell-label {
+	background-color: $form-color1;
+	color: white;
+}
